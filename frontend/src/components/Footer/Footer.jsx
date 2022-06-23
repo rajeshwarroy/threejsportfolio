@@ -20,16 +20,16 @@ const Footer = () => {
       </div>
       <div>
         <Typography variant="h6">Social Media</Typography>
-        <a href="https://github.com/meabhisingh/" target="black">
+        <a href="https://github.com/rajeshwarroy/" target="black">
           <BsGithub />
         </a>
-        <a href="https://youtube.com/6packprogrammer/" target="black">
+        <a href="https://www.youtube.com/channel/UCg0DJqpmY90qg_L-gXO-jBQ" target="black">
           <BsYoutube />
         </a>
-        <a href="https://instagram.com/meabhisingh/" target="black">
+        <a href="https://www.instagram.com/rajeshwarroyroni/" target="black">
           <BsInstagram />
         </a>
-        <a href="https://www.linkedin.com/in/meabhisingh/" target="black">
+        <a href="https://www.linkedin.com/in/rajeshwar-roy-roni-5b8150157/" target="black">
           <BsLinkedin />
         </a>
       </div>

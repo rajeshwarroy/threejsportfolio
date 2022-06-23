@@ -38,8 +38,8 @@ const Home = ({ timelines, youtubes, skills }) => {
     );
     camera.position.set(4, 4, 8);
 
-    // const canvas = document.querySelector(".homeCanvas");
-    // const renderer = new THREE.WebGLRenderer({ canvas });
+    const canvas = document.querySelector(".homeCanvas");
+    const renderer = new THREE.WebGLRenderer({ canvas });
 
     const moonGeometry = new THREE.SphereGeometry(2, 64, 64);
     const moonMaterial = new THREE.MeshStandardMaterial({ map: moonTexture });
@@ -63,48 +63,48 @@ const Home = ({ timelines, youtubes, skills }) => {
     scene.background = spaceTexture;
 
     // mouse amination block
-    // const constSpeed = 0.01;
-    // window.addEventListener("mousemove", (e) => {
-    //   if (e.clientX <= window.innerWidth / 2) {
-    //     moon.rotation.x -= constSpeed;
-    //     moon.rotation.y += constSpeed;
-    //     venus.rotation.x -= constSpeed;
-    //     venus.rotation.y += constSpeed;
-    //   }
+    const constSpeed = 0.01;
+    window.addEventListener("mousemove", (e) => {
+      if (e.clientX <= window.innerWidth / 2) {
+        moon.rotation.x -= constSpeed;
+        moon.rotation.y += constSpeed;
+        venus.rotation.x -= constSpeed;
+        venus.rotation.y += constSpeed;
+      }
 
-    //   if (e.clientX > window.innerWidth / 2) {
-    //     moon.rotation.x -= constSpeed;
-    //     moon.rotation.y -= constSpeed;
-    //     venus.rotation.x -= constSpeed;
-    //     venus.rotation.y -= constSpeed;
-    //   }
+      if (e.clientX > window.innerWidth / 2) {
+        moon.rotation.x -= constSpeed;
+        moon.rotation.y -= constSpeed;
+        venus.rotation.x -= constSpeed;
+        venus.rotation.y -= constSpeed;
+      }
 
-    //   if (e.clientY > window.innerHeight / 2) {
-    //     moon.rotation.x -= constSpeed;
-    //     moon.rotation.y += constSpeed;
-    //     venus.rotation.x -= constSpeed;
-    //     venus.rotation.y += constSpeed;
-    //   }
+      if (e.clientY > window.innerHeight / 2) {
+        moon.rotation.x -= constSpeed;
+        moon.rotation.y += constSpeed;
+        venus.rotation.x -= constSpeed;
+        venus.rotation.y += constSpeed;
+      }
 
-    //   if (e.clientY <= window.innerHeight / 2) {
-    //     moon.rotation.x -= constSpeed;
-    //     moon.rotation.y -= constSpeed;
-    //     venus.rotation.x -= constSpeed;
-    //     venus.rotation.y -= constSpeed;
-    //   }
-    // });
+      if (e.clientY <= window.innerHeight / 2) {
+        moon.rotation.x -= constSpeed;
+        moon.rotation.y -= constSpeed;
+        venus.rotation.x -= constSpeed;
+        venus.rotation.y -= constSpeed;
+      }
+    });
     // mouse amination block
 
     // header block
-    // const animate = () => {
-    //   requestAnimationFrame(animate);
-    //   moon.rotation.y += 0.001;
-    //   venus.rotation.y += 0.001;
-    //   renderer.setSize(window.innerWidth, window.innerHeight);
-    //   renderer.render(scene, camera);
-    // };
+    const animate = () => {
+      requestAnimationFrame(animate);
+      moon.rotation.y += 0.001;
+      venus.rotation.y += 0.001;
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.render(scene, camera);
+    };
 
-    // animate();
+    animate();
     // header block
 
     return window.addEventListener("scroll", () => {
